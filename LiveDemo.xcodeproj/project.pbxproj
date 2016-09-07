@@ -10,11 +10,21 @@
 		4E4F26E716B5020DEE35AC99 /* Pods_LiveDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F139CB6734BFB3E23EEBB6 /* Pods_LiveDemo.framework */; };
 		D926EEC61D7E801700D56E88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EEC51D7E801700D56E88 /* main.m */; };
 		D926EEC91D7E801700D56E88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EEC81D7E801700D56E88 /* AppDelegate.m */; };
-		D926EECC1D7E801700D56E88 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EECB1D7E801700D56E88 /* FirstViewController.m */; };
-		D926EECF1D7E801700D56E88 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EECE1D7E801700D56E88 /* SecondViewController.m */; };
 		D926EED21D7E801700D56E88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D926EED01D7E801700D56E88 /* Main.storyboard */; };
 		D926EED41D7E801700D56E88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D926EED31D7E801700D56E88 /* Assets.xcassets */; };
 		D926EED71D7E801700D56E88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D926EED51D7E801700D56E88 /* LaunchScreen.storyboard */; };
+		D926EEE71D7FF4CE00D56E88 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EEE11D7FF4CE00D56E88 /* FirstViewController.m */; };
+		D926EEE81D7FF4CE00D56E88 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EEE31D7FF4CE00D56E88 /* SecondViewController.m */; };
+		D926EEEE1D7FF54B00D56E88 /* HTBaseAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EEEB1D7FF54B00D56E88 /* HTBaseAPIClient.m */; };
+		D926EEEF1D7FF54B00D56E88 /* HTBaseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EEED1D7FF54B00D56E88 /* HTBaseAPIManager.m */; };
+		D926EF2A1D7FF55300D56E88 /* HomeApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF0C1D7FF55300D56E88 /* HomeApiManager.m */; };
+		D926EF2E1D7FF55300D56E88 /* HomeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF141D7FF55300D56E88 /* HomeDataModel.m */; };
+		D926EF391D7FF55B00D56E88 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF331D7FF55B00D56E88 /* BaseVC.m */; };
+		D926EF3A1D7FF55B00D56E88 /* BaseNavVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF351D7FF55B00D56E88 /* BaseNavVC.m */; };
+		D926EF3B1D7FF55B00D56E88 /* BaseWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF381D7FF55B00D56E88 /* BaseWebVC.m */; };
+		D926EF411D7FF59A00D56E88 /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF3E1D7FF59A00D56E88 /* UIColor+Tools.m */; };
+		D926EF421D7FF59A00D56E88 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF401D7FF59A00D56E88 /* UIView+Layout.m */; };
+		D926EF471D8013C300D56E88 /* URLSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF461D8013C300D56E88 /* URLSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,14 +35,36 @@
 		D926EEC51D7E801700D56E88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D926EEC71D7E801700D56E88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D926EEC81D7E801700D56E88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D926EECA1D7E801700D56E88 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		D926EECB1D7E801700D56E88 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		D926EECD1D7E801700D56E88 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		D926EECE1D7E801700D56E88 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		D926EED11D7E801700D56E88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D926EED31D7E801700D56E88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D926EED61D7E801700D56E88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D926EED81D7E801700D56E88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D926EEE01D7FF4CE00D56E88 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D926EEE11D7FF4CE00D56E88 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D926EEE21D7FF4CE00D56E88 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D926EEE31D7FF4CE00D56E88 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D926EEEA1D7FF54B00D56E88 /* HTBaseAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseAPIClient.h; sourceTree = "<group>"; };
+		D926EEEB1D7FF54B00D56E88 /* HTBaseAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseAPIClient.m; sourceTree = "<group>"; };
+		D926EEEC1D7FF54B00D56E88 /* HTBaseAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTBaseAPIManager.h; sourceTree = "<group>"; };
+		D926EEED1D7FF54B00D56E88 /* HTBaseAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTBaseAPIManager.m; sourceTree = "<group>"; };
+		D926EF0B1D7FF55300D56E88 /* HomeApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeApiManager.h; sourceTree = "<group>"; };
+		D926EF0C1D7FF55300D56E88 /* HomeApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeApiManager.m; sourceTree = "<group>"; };
+		D926EF131D7FF55300D56E88 /* HomeDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDataModel.h; sourceTree = "<group>"; };
+		D926EF141D7FF55300D56E88 /* HomeDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDataModel.m; sourceTree = "<group>"; };
+		D926EF331D7FF55B00D56E88 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		D926EF341D7FF55B00D56E88 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		D926EF351D7FF55B00D56E88 /* BaseNavVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavVC.m; sourceTree = "<group>"; };
+		D926EF361D7FF55B00D56E88 /* BaseNavVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavVC.h; sourceTree = "<group>"; };
+		D926EF371D7FF55B00D56E88 /* BaseWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebVC.h; sourceTree = "<group>"; };
+		D926EF381D7FF55B00D56E88 /* BaseWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebVC.m; sourceTree = "<group>"; };
+		D926EF3D1D7FF59A00D56E88 /* UIColor+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Tools.h"; sourceTree = "<group>"; };
+		D926EF3E1D7FF59A00D56E88 /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
+		D926EF3F1D7FF59A00D56E88 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		D926EF401D7FF59A00D56E88 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		D926EF431D8012FB00D56E88 /* LiveDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LiveDemo-Prefix.pch"; sourceTree = "<group>"; };
+		D926EF441D80138900D56E88 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		D926EF451D8013C300D56E88 /* URLSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSet.h; sourceTree = "<group>"; };
+		D926EF461D8013C300D56E88 /* URLSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +117,13 @@
 		D926EEC31D7E801700D56E88 /* LiveDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D926EEDE1D7FF4CE00D56E88 /* BaseVC */,
+				D926EEDF1D7FF4CE00D56E88 /* ViewController */,
+				D926EEE41D7FF4CE00D56E88 /* Setting */,
+				D926EEE51D7FF4CE00D56E88 /* Util */,
+				D926EEE61D7FF4CE00D56E88 /* Model */,
 				D926EEC71D7E801700D56E88 /* AppDelegate.h */,
 				D926EEC81D7E801700D56E88 /* AppDelegate.m */,
-				D926EECA1D7E801700D56E88 /* FirstViewController.h */,
-				D926EECB1D7E801700D56E88 /* FirstViewController.m */,
-				D926EECD1D7E801700D56E88 /* SecondViewController.h */,
-				D926EECE1D7E801700D56E88 /* SecondViewController.m */,
 				D926EED01D7E801700D56E88 /* Main.storyboard */,
 				D926EED31D7E801700D56E88 /* Assets.xcassets */,
 				D926EED51D7E801700D56E88 /* LaunchScreen.storyboard */,
@@ -103,9 +136,94 @@
 		D926EEC41D7E801700D56E88 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D926EF431D8012FB00D56E88 /* LiveDemo-Prefix.pch */,
 				D926EEC51D7E801700D56E88 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D926EEDE1D7FF4CE00D56E88 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				D926EF331D7FF55B00D56E88 /* BaseVC.m */,
+				D926EF341D7FF55B00D56E88 /* BaseVC.h */,
+				D926EF351D7FF55B00D56E88 /* BaseNavVC.m */,
+				D926EF361D7FF55B00D56E88 /* BaseNavVC.h */,
+				D926EF371D7FF55B00D56E88 /* BaseWebVC.h */,
+				D926EF381D7FF55B00D56E88 /* BaseWebVC.m */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		D926EEDF1D7FF4CE00D56E88 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D926EEE01D7FF4CE00D56E88 /* FirstViewController.h */,
+				D926EEE11D7FF4CE00D56E88 /* FirstViewController.m */,
+				D926EEE21D7FF4CE00D56E88 /* SecondViewController.h */,
+				D926EEE31D7FF4CE00D56E88 /* SecondViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D926EEE41D7FF4CE00D56E88 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				D926EF451D8013C300D56E88 /* URLSet.h */,
+				D926EF461D8013C300D56E88 /* URLSet.m */,
+				D926EF441D80138900D56E88 /* Macro.h */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		D926EEE51D7FF4CE00D56E88 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D926EF3C1D7FF59A00D56E88 /* Categories */,
+				D926EEE91D7FF54B00D56E88 /* NetWork */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D926EEE61D7FF4CE00D56E88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D926EEF01D7FF55300D56E88 /* HomeAPI */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D926EEE91D7FF54B00D56E88 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				D926EEEA1D7FF54B00D56E88 /* HTBaseAPIClient.h */,
+				D926EEEB1D7FF54B00D56E88 /* HTBaseAPIClient.m */,
+				D926EEEC1D7FF54B00D56E88 /* HTBaseAPIManager.h */,
+				D926EEED1D7FF54B00D56E88 /* HTBaseAPIManager.m */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		D926EEF01D7FF55300D56E88 /* HomeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D926EF0B1D7FF55300D56E88 /* HomeApiManager.h */,
+				D926EF0C1D7FF55300D56E88 /* HomeApiManager.m */,
+				D926EF131D7FF55300D56E88 /* HomeDataModel.h */,
+				D926EF141D7FF55300D56E88 /* HomeDataModel.m */,
+			);
+			path = HomeAPI;
+			sourceTree = "<group>";
+		};
+		D926EF3C1D7FF59A00D56E88 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D926EF3D1D7FF59A00D56E88 /* UIColor+Tools.h */,
+				D926EF3E1D7FF59A00D56E88 /* UIColor+Tools.m */,
+				D926EF3F1D7FF59A00D56E88 /* UIView+Layout.h */,
+				D926EF401D7FF59A00D56E88 /* UIView+Layout.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,10 +347,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D926EECF1D7E801700D56E88 /* SecondViewController.m in Sources */,
+				D926EEE81D7FF4CE00D56E88 /* SecondViewController.m in Sources */,
+				D926EF411D7FF59A00D56E88 /* UIColor+Tools.m in Sources */,
+				D926EF3A1D7FF55B00D56E88 /* BaseNavVC.m in Sources */,
+				D926EF2A1D7FF55300D56E88 /* HomeApiManager.m in Sources */,
 				D926EEC91D7E801700D56E88 /* AppDelegate.m in Sources */,
-				D926EECC1D7E801700D56E88 /* FirstViewController.m in Sources */,
+				D926EF421D7FF59A00D56E88 /* UIView+Layout.m in Sources */,
+				D926EF2E1D7FF55300D56E88 /* HomeDataModel.m in Sources */,
+				D926EEE71D7FF4CE00D56E88 /* FirstViewController.m in Sources */,
+				D926EEEF1D7FF54B00D56E88 /* HTBaseAPIManager.m in Sources */,
 				D926EEC61D7E801700D56E88 /* main.m in Sources */,
+				D926EF3B1D7FF55B00D56E88 /* BaseWebVC.m in Sources */,
+				D926EF471D8013C300D56E88 /* URLSet.m in Sources */,
+				D926EF391D7FF55B00D56E88 /* BaseVC.m in Sources */,
+				D926EEEE1D7FF54B00D56E88 /* HTBaseAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +473,9 @@
 			baseConfigurationReference = 020D0F76AAAE66EC52CAC102 /* Pods-LiveDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LiveDemo/LiveDemo-Prefix.pch";
 				INFOPLIST_FILE = LiveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishang.LiveDemo;
@@ -357,6 +488,9 @@
 			baseConfigurationReference = A0CF0BA59BA20BB47BBE4994 /* Pods-LiveDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LiveDemo/LiveDemo-Prefix.pch";
 				INFOPLIST_FILE = LiveDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.haishang.LiveDemo;
