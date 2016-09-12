@@ -32,13 +32,19 @@ static HomeApiManager *shared_manager = nil;
                 Success:(void (^)(id data))success
                 failure:(void (^)(NSError *error))failure
 {
-    NSDictionary * params = [[HTBaseAPIClient sharedClient] fetchParameters:dic withMethod:@"urlStr"];
-    [[HTBaseAPIClient sharedClient] POST:urlStr parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@",responseObject);
-        [self parseHomeData:responseObject success:success failure:failure];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        failure(error);
+    NSDictionary * params = [[HTBaseAPIClient sharedClient] fetchParameters:dic withMethod:@"homedata"];
+    NSMutableURLRequest *request = [[HTBaseAPIClient sharedClient].requestSerializer requestWithMethod:@"POST" URLString:urlStr parameters:params error:nil];
+    NSLog(@"-------------start");
+    NSURLSessionDataTask *dataTask = [[HTBaseAPIClient sharedClient] dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+            failure(error);
+        } else {
+            NSLog(@"-----------------end%@ %@", response, responseObject);
+            [self parseHomeData:responseObject success:success failure:failure];
+        }
     }];
+    [dataTask resume];
 }
 
 - (void)parseHomeData:(id)doc success:(void (^)(id data))success failure:(void (^)(NSError *error))failure

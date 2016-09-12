@@ -17,6 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSUserDefaults *uDefaults = [NSUserDefaults standardUserDefaults];
+    [uDefaults setObject:@"db98f87a-b1b5-0e88-48db-6dbbe4f2bb7c" forKey:@"userid"];
+    [uDefaults setObject:@"13acb42fc41b4dfdfdd7041354eff473" forKey:@"tokencode"];
+    [uDefaults synchronize];
+
     return YES;
 }
 

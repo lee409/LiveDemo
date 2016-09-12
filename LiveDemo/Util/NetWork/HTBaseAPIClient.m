@@ -9,7 +9,8 @@
     static HTBaseAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[HTBaseAPIClient alloc] initWithBaseURL:[NSURL URLWithString:HTHostURL]];
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];        
+        _sharedClient = [[HTBaseAPIClient alloc] initWithBaseURL:[NSURL URLWithString:HTHostURL] sessionConfiguration:configuration];
         _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
         _sharedClient.requestSerializer = [AFHTTPRequestSerializer serializer];
         
@@ -33,7 +34,7 @@
         }
         NSString *userid = [uDefaults objectForKey:@"user_id"];
         
-        NSDictionary *dic = @{@"user_id":userid?userid:@"0",
+        NSDictionary *dic = @{@"userid":userid?userid:@"0",
                               @"mobile_model":strModel,
                               @"sys_version":sys_version,
                               @"app_version":appVersion,
@@ -54,13 +55,13 @@
 - (NSDictionary *)fetchParameters:(NSDictionary *)dic withMethod:(NSString *)methodStr
 {
     NSUserDefaults *uDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *userId = [uDefaults objectForKey:@"user_id"];
-    NSString *userToken = [uDefaults objectForKey:@"tokenCode"];
+    NSString *userId = [uDefaults objectForKey:@"userid"];
+    NSString *userToken = [uDefaults objectForKey:@"tokencode"];
 
     NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithDictionary:dic];
-    [params setObject:userId?userId:@"0" forKey:@"user_id"];
+    [params setObject:userId?userId:@"0" forKey:@"userid"];
     NSString* vcode = [self sign:methodStr strParams:@"com.lxm.live"];
-    [params setObject:userToken?userToken:@"0" forKey:@"tokenCode"];
+    [params setObject:userToken?userToken:@"0" forKey:@"tokencode"];
     [params setObject:vcode forKey:@"vcode"];
     [params setObject:[self timestamp] forKey:@"reqtime"];
 
@@ -77,21 +78,21 @@
 - (NSString*)sign:(NSString*)methodName strParams:(NSString*)params
 {
     // 规则
-    // token + md5( “methodName” + params + md5( userCode 的前六位 ))
+    // token + md5( “methodName” + params + md5( userid 的前六位 ))
     NSUserDefaults *uDefaults = [NSUserDefaults standardUserDefaults];
-    NSString *userCode = [uDefaults objectForKey:@"user_id"];
-    NSString *token = [uDefaults objectForKey:@"tokenCode"];
+    NSString *userid = [uDefaults objectForKey:@"userid"];
+    NSString *token = [uDefaults objectForKey:@"tokencode"];
 
     NSMutableString* vCode = [[NSMutableString alloc]init];
-    NSString* skey = [self md5:[userCode substringToIndex:6]];
+    NSString* skey = [self md5:[userid substringToIndex:6]];
     [vCode appendString:token];
     NSString *key = [[methodName stringByAppendingString:params] stringByAppendingString:skey];
     [vCode appendString:[self md5:key]];
-    NSLog(@"userCode 的前六位=%@",[userCode substringToIndex:6]);
-    NSLog(@"md5( userCode 的前六位 )=%@",skey);
-    NSLog(@"“methodName” + params + md5( userCode 的前六位 )=%@",key);
-    NSLog(@"md5( “methodName” + params + md5( userCode 的前六位 )=%@",[self md5:key]);
-    NSLog(@"token + md5( “methodName” + params + md5( userCode 的前六位 ))=%@",vCode);
+    NSLog(@"userid 的前六位=%@",[userid substringToIndex:6]);
+    NSLog(@"md5( userid 的前六位 )=%@",skey);
+    NSLog(@"“methodName” + params + md5( userid 的前六位 )=%@",key);
+    NSLog(@"md5( “methodName” + params + md5( userid 的前六位 )=%@",[self md5:key]);
+    NSLog(@"token + md5( “methodName” + params + md5( userid 的前六位 ))=%@",vCode);
     return vCode;
 }
 
