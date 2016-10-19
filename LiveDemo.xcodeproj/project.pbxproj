@@ -25,7 +25,40 @@
 		D926EF411D7FF59A00D56E88 /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF3E1D7FF59A00D56E88 /* UIColor+Tools.m */; };
 		D926EF421D7FF59A00D56E88 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF401D7FF59A00D56E88 /* UIView+Layout.m */; };
 		D926EF471D8013C300D56E88 /* URLSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF461D8013C300D56E88 /* URLSet.m */; };
+		D9C4D9CE1DB7658E0086BD19 /* VideoSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9CA1DB7658E0086BD19 /* VideoSettingModel.m */; };
+		D9C4D9CF1DB7658E0086BD19 /* VideoSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9CD1DB7658E0086BD19 /* VideoSettingViewModel.m */; };
+		D9C4D9D21DB765EE0086BD19 /* Defines.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9D11DB765EE0086BD19 /* Defines.m */; };
+		D9C4D9D41DB76A7A0086BD19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9D31DB76A7A0086BD19 /* CoreGraphics.framework */; };
+		D9C4D9D61DB773670086BD19 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9D51DB773670086BD19 /* libz.tbd */; };
+		D9C4D9D81DB773760086BD19 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9D71DB773760086BD19 /* libc++.tbd */; };
+		D9C4D9DA1DB774630086BD19 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9D91DB774630086BD19 /* AudioToolbox.framework */; };
+		D9C4D9DC1DB7746B0086BD19 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9DB1DB7746B0086BD19 /* CoreMedia.framework */; };
+		D9C4D9DE1DB774730086BD19 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9DD1DB774730086BD19 /* VideoToolbox.framework */; };
+		D9C4D9E01DB774E40086BD19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9DF1DB774E40086BD19 /* UIKit.framework */; };
+		D9C4D9EF1DB776630086BD19 /* StreamingLandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9E41DB776630086BD19 /* StreamingLandscapeViewController.m */; };
+		D9C4D9F01DB776630086BD19 /* StreamingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9E61DB776630086BD19 /* StreamingModel.m */; };
+		D9C4D9F11DB776630086BD19 /* StreamingPortraitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9E81DB776630086BD19 /* StreamingPortraitViewController.m */; };
+		D9C4D9F21DB776630086BD19 /* StreamingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9EA1DB776630086BD19 /* StreamingViewController.m */; };
+		D9C4D9F31DB776630086BD19 /* StreamingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9EC1DB776630086BD19 /* StreamingViewModel.m */; };
+		D9C4D9F41DB776630086BD19 /* VideoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9EE1DB776630086BD19 /* VideoCore.framework */; };
+		D9C4D9F81DB77B8E0086BD19 /* VideoCore.framework in Resources */ = {isa = PBXBuildFile; fileRef = D9C4D9EE1DB776630086BD19 /* VideoCore.framework */; };
+		D9C4D9FB1DB77C4C0086BD19 /* VideoCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9C4D9EE1DB776630086BD19 /* VideoCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9C4D9FE1DB780B90086BD19 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9FD1DB780B90086BD19 /* DemoViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9C4D9FA1DB77C340086BD19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D9C4D9FB1DB77C4C0086BD19 /* VideoCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		020D0F76AAAE66EC52CAC102 /* Pods-LiveDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveDemo/Pods-LiveDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +98,32 @@
 		D926EF441D80138900D56E88 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		D926EF451D8013C300D56E88 /* URLSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSet.h; sourceTree = "<group>"; };
 		D926EF461D8013C300D56E88 /* URLSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSet.m; sourceTree = "<group>"; };
+		D9C4D9CA1DB7658E0086BD19 /* VideoSettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSettingModel.m; sourceTree = "<group>"; };
+		D9C4D9CB1DB7658E0086BD19 /* VideoSettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSettingModel.h; sourceTree = "<group>"; };
+		D9C4D9CC1DB7658E0086BD19 /* VideoSettingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSettingViewModel.h; sourceTree = "<group>"; };
+		D9C4D9CD1DB7658E0086BD19 /* VideoSettingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSettingViewModel.m; sourceTree = "<group>"; };
+		D9C4D9D01DB765EE0086BD19 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		D9C4D9D11DB765EE0086BD19 /* Defines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Defines.m; sourceTree = "<group>"; };
+		D9C4D9D31DB76A7A0086BD19 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D9C4D9D51DB773670086BD19 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D9C4D9D71DB773760086BD19 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D9C4D9D91DB774630086BD19 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D9C4D9DB1DB7746B0086BD19 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D9C4D9DD1DB774730086BD19 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		D9C4D9DF1DB774E40086BD19 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D9C4D9E31DB776630086BD19 /* StreamingLandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingLandscapeViewController.h; sourceTree = "<group>"; };
+		D9C4D9E41DB776630086BD19 /* StreamingLandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingLandscapeViewController.m; sourceTree = "<group>"; };
+		D9C4D9E51DB776630086BD19 /* StreamingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingModel.h; sourceTree = "<group>"; };
+		D9C4D9E61DB776630086BD19 /* StreamingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingModel.m; sourceTree = "<group>"; };
+		D9C4D9E71DB776630086BD19 /* StreamingPortraitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingPortraitViewController.h; sourceTree = "<group>"; };
+		D9C4D9E81DB776630086BD19 /* StreamingPortraitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingPortraitViewController.m; sourceTree = "<group>"; };
+		D9C4D9E91DB776630086BD19 /* StreamingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingViewController.h; sourceTree = "<group>"; };
+		D9C4D9EA1DB776630086BD19 /* StreamingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingViewController.m; sourceTree = "<group>"; };
+		D9C4D9EB1DB776630086BD19 /* StreamingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingViewModel.h; sourceTree = "<group>"; };
+		D9C4D9EC1DB776630086BD19 /* StreamingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingViewModel.m; sourceTree = "<group>"; };
+		D9C4D9EE1DB776630086BD19 /* VideoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VideoCore.framework; sourceTree = "<group>"; };
+		D9C4D9FC1DB780B90086BD19 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		D9C4D9FD1DB780B90086BD19 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +131,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C4D9E01DB774E40086BD19 /* UIKit.framework in Frameworks */,
+				D9C4D9DE1DB774730086BD19 /* VideoToolbox.framework in Frameworks */,
+				D9C4D9F41DB776630086BD19 /* VideoCore.framework in Frameworks */,
+				D9C4D9DC1DB7746B0086BD19 /* CoreMedia.framework in Frameworks */,
+				D9C4D9DA1DB774630086BD19 /* AudioToolbox.framework in Frameworks */,
+				D9C4D9D81DB773760086BD19 /* libc++.tbd in Frameworks */,
+				D9C4D9D61DB773670086BD19 /* libz.tbd in Frameworks */,
+				D9C4D9D41DB76A7A0086BD19 /* CoreGraphics.framework in Frameworks */,
 				4E4F26E716B5020DEE35AC99 /* Pods_LiveDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +149,13 @@
 		2DE0E98F1269D87FD1EB22B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D9C4D9DF1DB774E40086BD19 /* UIKit.framework */,
+				D9C4D9DD1DB774730086BD19 /* VideoToolbox.framework */,
+				D9C4D9DB1DB7746B0086BD19 /* CoreMedia.framework */,
+				D9C4D9D91DB774630086BD19 /* AudioToolbox.framework */,
+				D9C4D9D71DB773760086BD19 /* libc++.tbd */,
+				D9C4D9D51DB773670086BD19 /* libz.tbd */,
+				D9C4D9D31DB76A7A0086BD19 /* CoreGraphics.framework */,
 				37F139CB6734BFB3E23EEBB6 /* Pods_LiveDemo.framework */,
 			);
 			name = Frameworks;
@@ -162,6 +236,8 @@
 				D926EEE11D7FF4CE00D56E88 /* FirstViewController.m */,
 				D926EEE21D7FF4CE00D56E88 /* SecondViewController.h */,
 				D926EEE31D7FF4CE00D56E88 /* SecondViewController.m */,
+				D9C4D9FC1DB780B90086BD19 /* DemoViewController.h */,
+				D9C4D9FD1DB780B90086BD19 /* DemoViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -169,6 +245,8 @@
 		D926EEE41D7FF4CE00D56E88 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				D9C4D9D01DB765EE0086BD19 /* Defines.h */,
+				D9C4D9D11DB765EE0086BD19 /* Defines.m */,
 				D926EF451D8013C300D56E88 /* URLSet.h */,
 				D926EF461D8013C300D56E88 /* URLSet.m */,
 				D926EF441D80138900D56E88 /* Macro.h */,
@@ -179,6 +257,8 @@
 		D926EEE51D7FF4CE00D56E88 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				D9C4D9E21DB776630086BD19 /* Streaming */,
+				D9C4D9ED1DB776630086BD19 /* Video */,
 				D926EF3C1D7FF59A00D56E88 /* Categories */,
 				D926EEE91D7FF54B00D56E88 /* NetWork */,
 			);
@@ -207,6 +287,10 @@
 		D926EEF01D7FF55300D56E88 /* HomeAPI */ = {
 			isa = PBXGroup;
 			children = (
+				D9C4D9CB1DB7658E0086BD19 /* VideoSettingModel.h */,
+				D9C4D9CA1DB7658E0086BD19 /* VideoSettingModel.m */,
+				D9C4D9CC1DB7658E0086BD19 /* VideoSettingViewModel.h */,
+				D9C4D9CD1DB7658E0086BD19 /* VideoSettingViewModel.m */,
 				D926EF0B1D7FF55300D56E88 /* HomeApiManager.h */,
 				D926EF0C1D7FF55300D56E88 /* HomeApiManager.m */,
 				D926EF131D7FF55300D56E88 /* HomeDataModel.h */,
@@ -226,6 +310,31 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		D9C4D9E21DB776630086BD19 /* Streaming */ = {
+			isa = PBXGroup;
+			children = (
+				D9C4D9E31DB776630086BD19 /* StreamingLandscapeViewController.h */,
+				D9C4D9E41DB776630086BD19 /* StreamingLandscapeViewController.m */,
+				D9C4D9E51DB776630086BD19 /* StreamingModel.h */,
+				D9C4D9E61DB776630086BD19 /* StreamingModel.m */,
+				D9C4D9E71DB776630086BD19 /* StreamingPortraitViewController.h */,
+				D9C4D9E81DB776630086BD19 /* StreamingPortraitViewController.m */,
+				D9C4D9E91DB776630086BD19 /* StreamingViewController.h */,
+				D9C4D9EA1DB776630086BD19 /* StreamingViewController.m */,
+				D9C4D9EB1DB776630086BD19 /* StreamingViewModel.h */,
+				D9C4D9EC1DB776630086BD19 /* StreamingViewModel.m */,
+			);
+			path = Streaming;
+			sourceTree = "<group>";
+		};
+		D9C4D9ED1DB776630086BD19 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				D9C4D9EE1DB776630086BD19 /* VideoCore.framework */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,6 +348,7 @@
 				D926EEBF1D7E801700D56E88 /* Resources */,
 				96B96BB028A54339A9729674 /* [CP] Embed Pods Frameworks */,
 				76F445139CEEA9A509D78271 /* [CP] Copy Pods Resources */,
+				D9C4D9FA1DB77C340086BD19 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,6 +370,8 @@
 				TargetAttributes = {
 					D926EEC01D7E801700D56E88 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P5N6CU5324;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -286,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C4D9F81DB77B8E0086BD19 /* VideoCore.framework in Resources */,
 				D926EED71D7E801700D56E88 /* LaunchScreen.storyboard in Resources */,
 				D926EED41D7E801700D56E88 /* Assets.xcassets in Resources */,
 				D926EED21D7E801700D56E88 /* Main.storyboard in Resources */,
@@ -348,19 +461,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				D926EEE81D7FF4CE00D56E88 /* SecondViewController.m in Sources */,
+				D9C4D9CF1DB7658E0086BD19 /* VideoSettingViewModel.m in Sources */,
 				D926EF411D7FF59A00D56E88 /* UIColor+Tools.m in Sources */,
 				D926EF3A1D7FF55B00D56E88 /* BaseNavVC.m in Sources */,
 				D926EF2A1D7FF55300D56E88 /* HomeApiManager.m in Sources */,
 				D926EEC91D7E801700D56E88 /* AppDelegate.m in Sources */,
 				D926EF421D7FF59A00D56E88 /* UIView+Layout.m in Sources */,
+				D9C4D9CE1DB7658E0086BD19 /* VideoSettingModel.m in Sources */,
+				D9C4D9D21DB765EE0086BD19 /* Defines.m in Sources */,
 				D926EF2E1D7FF55300D56E88 /* HomeDataModel.m in Sources */,
 				D926EEE71D7FF4CE00D56E88 /* FirstViewController.m in Sources */,
+				D9C4D9F31DB776630086BD19 /* StreamingViewModel.m in Sources */,
 				D926EEEF1D7FF54B00D56E88 /* HTBaseAPIManager.m in Sources */,
 				D926EEC61D7E801700D56E88 /* main.m in Sources */,
+				D9C4D9F21DB776630086BD19 /* StreamingViewController.m in Sources */,
 				D926EF3B1D7FF55B00D56E88 /* BaseWebVC.m in Sources */,
 				D926EF471D8013C300D56E88 /* URLSet.m in Sources */,
+				D9C4D9F01DB776630086BD19 /* StreamingModel.m in Sources */,
+				D9C4D9EF1DB776630086BD19 /* StreamingLandscapeViewController.m in Sources */,
 				D926EF391D7FF55B00D56E88 /* BaseVC.m in Sources */,
+				D9C4D9F11DB776630086BD19 /* StreamingPortraitViewController.m in Sources */,
 				D926EEEE1D7FF54B00D56E88 /* HTBaseAPIClient.m in Sources */,
+				D9C4D9FE1DB780B90086BD19 /* DemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,13 +595,22 @@
 			baseConfigurationReference = 020D0F76AAAE66EC52CAC102 /* Pods-LiveDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rixing Ye (U688F647H7)";
+				DEVELOPMENT_TEAM = P5N6CU5324;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LiveDemo/Util/Video",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LiveDemo/LiveDemo-Prefix.pch";
 				INFOPLIST_FILE = LiveDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haishang.LiveDemo;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LearnEasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2ee82f99-9e96-42c2-b406-f4425d076d0f";
+				PROVISIONING_PROFILE_SPECIFIER = LearyEasyDev;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/LiveDemo/Util/Video";
 			};
 			name = Debug;
 		};
@@ -488,13 +619,21 @@
 			baseConfigurationReference = A0CF0BA59BA20BB47BBE4994 /* Pods-LiveDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LiveDemo/Util/Video",
+				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LiveDemo/LiveDemo-Prefix.pch";
 				INFOPLIST_FILE = LiveDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.haishang.LiveDemo;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LearnEasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/LiveDemo/Util/Video";
 			};
 			name = Release;
 		};

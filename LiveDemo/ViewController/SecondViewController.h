@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VideoSettingViewModel.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController<UINavigationControllerDelegate>
 
+@property(nonatomic, strong) VideoSettingViewModel* model;
 
 @end
 

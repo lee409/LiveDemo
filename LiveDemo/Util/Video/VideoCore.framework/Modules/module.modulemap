@@ -1,0 +1,6 @@
+framework module VideoCore {
+  umbrella header "VideoCore.h"
+
+  export *
+  module * { export * }
+}
