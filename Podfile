@@ -7,5 +7,6 @@ target 'LiveDemo' do
     pod 'AFNetworking'
     pod 'MBProgressHUD'
     pod 'JSONModel'
+    pod 'SocketRocket'
 end
 

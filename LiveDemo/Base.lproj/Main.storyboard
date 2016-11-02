@@ -48,6 +48,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZV3-5G-hou">
+                                <frame key="frameInset" minX="164" minY="459" width="46" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="NB2-lL-5sa" kind="show" id="7gR-yO-IcS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -62,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="764" y="-361.16941529235385"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -138,22 +146,6 @@
         <!--Streaming Portrait View Controller-->
         <scene sceneID="gTz-uk-slg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V1T-pq-9lt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="iS3-wr-Chg">
-                    <connections>
-                        <action selector="onPinch:" destination="goa-Zy-rZw" id="o5B-u8-Nl2"/>
-                    </connections>
-                </pinchGestureRecognizer>
-                <tapGestureRecognizer id="661-ce-1B4">
-                    <connections>
-                        <action selector="onDoubleTap:" destination="goa-Zy-rZw" id="2cq-Vi-WFn"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Met-Ol-WUJ">
-                    <connections>
-                        <action selector="onTap:" destination="goa-Zy-rZw" id="jmo-Kr-bDY"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <viewController storyboardIdentifier="StreamingPortrait" id="goa-Zy-rZw" customClass="StreamingPortraitViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E24-Vo-9Qj"/>
@@ -243,28 +235,28 @@
                         <outlet property="torchButton" destination="mmi-7V-ZLk" id="W9T-6Q-T7n"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1T-pq-9lt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="iS3-wr-Chg">
+                    <connections>
+                        <action selector="onPinch:" destination="goa-Zy-rZw" id="o5B-u8-Nl2"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="661-ce-1B4">
+                    <connections>
+                        <action selector="onDoubleTap:" destination="goa-Zy-rZw" id="2cq-Vi-WFn"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Met-Ol-WUJ">
+                    <connections>
+                        <action selector="onTap:" destination="goa-Zy-rZw" id="jmo-Kr-bDY"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1124" y="1369"/>
         </scene>
         <!--Streaming Landscape View Controller-->
         <scene sceneID="XyT-uY-KLE">
             <objects>
-                <tapGestureRecognizer id="esR-t3-Uwm">
-                    <connections>
-                        <action selector="onTap:" destination="5gf-ju-nRU" id="hq6-ef-xUm"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GzC-Hj-9ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pinchGestureRecognizer id="9B2-zP-anL">
-                    <connections>
-                        <action selector="onPinch:" destination="5gf-ju-nRU" id="1j7-99-kQX"/>
-                    </connections>
-                </pinchGestureRecognizer>
-                <tapGestureRecognizer id="hfD-wa-p2T">
-                    <connections>
-                        <action selector="onDoubleTap:" destination="5gf-ju-nRU" id="Qf3-Jp-eri"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <viewController storyboardIdentifier="StreamingLandscape" id="5gf-ju-nRU" customClass="StreamingLandscapeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JrA-Z4-r0d"/>
@@ -354,6 +346,22 @@
                         <outlet property="torchButton" destination="Cgu-tD-VZI" id="LfU-As-OQO"/>
                     </connections>
                 </viewController>
+                <tapGestureRecognizer id="esR-t3-Uwm">
+                    <connections>
+                        <action selector="onTap:" destination="5gf-ju-nRU" id="hq6-ef-xUm"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzC-Hj-9ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="9B2-zP-anL">
+                    <connections>
+                        <action selector="onPinch:" destination="5gf-ju-nRU" id="1j7-99-kQX"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <tapGestureRecognizer id="hfD-wa-p2T">
+                    <connections>
+                        <action selector="onDoubleTap:" destination="5gf-ju-nRU" id="Qf3-Jp-eri"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="204" y="1419"/>
         </scene>
@@ -424,6 +432,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzW-f2-9ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-18" y="403"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rf5-lT-dpX">
+            <objects>
+                <tableViewController id="NB2-lL-5sa" customClass="TCViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Cof-Td-A9V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" id="V8W-oW-ft5">
+                            <rect key="frame" x="0.0" y="174" width="375" height="48"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <connections>
+                                <outlet property="delegate" destination="NB2-lL-5sa" id="CDa-wx-kUB"/>
+                            </connections>
+                        </textView>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SentCell" id="Q33-eE-ybB" customClass="TCChatCell">
+                                <rect key="frame" x="0.0" y="86" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q33-eE-ybB" id="zOh-5b-uGl">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="blah" translatesAutoresizingMaskIntoConstraints="NO" id="fPy-ct-xlS">
+                                            <frame key="frameInset" maxX="-20"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="Cof-Td-A9V" id="1Gb-pb-c21"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="textView" destination="fPy-ct-xlS" id="ota-RZ-StR"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReceivedCell" id="Lhh-bm-5W9" customClass="TCChatCell">
+                                <rect key="frame" x="0.0" y="130" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lhh-bm-5W9" id="5ey-cV-G4M">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="blah" translatesAutoresizingMaskIntoConstraints="NO" id="trN-sP-7kd">
+                                            <frame key="frameInset" maxX="-20"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="Cof-Td-A9V" id="kID-ea-mmY"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="textView" destination="trN-sP-7kd" id="zp9-Tf-jYm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NB2-lL-5sa" id="JEL-SS-Da1"/>
+                            <outlet property="delegate" destination="NB2-lL-5sa" id="A6U-Rd-DeG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="0je-QR-jn9">
+                        <barButtonItem key="leftBarButtonItem" title="Ping" id="FSd-D3-9og">
+                            <connections>
+                                <action selector="sendPing:" destination="NB2-lL-5sa" id="LRb-6T-MlG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="s2x-Si-wTc">
+                            <connections>
+                                <action selector="reconnect:" destination="NB2-lL-5sa" id="OeK-JS-wLl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputView" destination="V8W-oW-ft5" id="BVI-kj-6KY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNz-xq-14X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="-361"/>
         </scene>
     </scenes>
     <resources>

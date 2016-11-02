@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SocketRocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TPKeyboardAvoiding.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -43,6 +48,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0BF8569A1D17D47E1A86EB020383E8D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>15619020FBA53D991E22C4609105ECA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F1841A9F2786E6F42737208942E30CC</key>
+		<key>49937946E2BF7D271439B54F1D2834F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>438DAB3DCE2E7DAA9540EC6925DEEFCF</key>
+		<key>7BDDBAF038ABC3FE563D2399F76A2B92</key>
 		<dict>
 			<key>primary</key>
 			<true/>

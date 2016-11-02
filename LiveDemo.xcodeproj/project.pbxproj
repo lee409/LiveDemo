@@ -25,6 +25,10 @@
 		D926EF411D7FF59A00D56E88 /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF3E1D7FF59A00D56E88 /* UIColor+Tools.m */; };
 		D926EF421D7FF59A00D56E88 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF401D7FF59A00D56E88 /* UIView+Layout.m */; };
 		D926EF471D8013C300D56E88 /* URLSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D926EF461D8013C300D56E88 /* URLSet.m */; };
+		D96B6B6E1DC899A700EDE198 /* TCChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B6B6B1DC899A700EDE198 /* TCChatCell.m */; };
+		D96B6B6F1DC899A700EDE198 /* TCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B6B6D1DC899A700EDE198 /* TCViewController.m */; };
+		D9B76D1D1DC98EFE004D4F30 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B76D1C1DC98EFE004D4F30 /* UserModel.m */; };
+		D9B76D201DC990C0004D4F30 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B76D1F1DC990C0004D4F30 /* MessageModel.m */; };
 		D9C4D9CE1DB7658E0086BD19 /* VideoSettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9CA1DB7658E0086BD19 /* VideoSettingModel.m */; };
 		D9C4D9CF1DB7658E0086BD19 /* VideoSettingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9CD1DB7658E0086BD19 /* VideoSettingViewModel.m */; };
 		D9C4D9D21DB765EE0086BD19 /* Defines.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C4D9D11DB765EE0086BD19 /* Defines.m */; };
@@ -98,6 +102,14 @@
 		D926EF441D80138900D56E88 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		D926EF451D8013C300D56E88 /* URLSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSet.h; sourceTree = "<group>"; };
 		D926EF461D8013C300D56E88 /* URLSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSet.m; sourceTree = "<group>"; };
+		D96B6B6A1DC899A700EDE198 /* TCChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCChatCell.h; sourceTree = "<group>"; };
+		D96B6B6B1DC899A700EDE198 /* TCChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCChatCell.m; sourceTree = "<group>"; };
+		D96B6B6C1DC899A700EDE198 /* TCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCViewController.h; sourceTree = "<group>"; };
+		D96B6B6D1DC899A700EDE198 /* TCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCViewController.m; sourceTree = "<group>"; };
+		D9B76D1B1DC98EFE004D4F30 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		D9B76D1C1DC98EFE004D4F30 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		D9B76D1E1DC990C0004D4F30 /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		D9B76D1F1DC990C0004D4F30 /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		D9C4D9CA1DB7658E0086BD19 /* VideoSettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoSettingModel.m; sourceTree = "<group>"; };
 		D9C4D9CB1DB7658E0086BD19 /* VideoSettingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSettingModel.h; sourceTree = "<group>"; };
 		D9C4D9CC1DB7658E0086BD19 /* VideoSettingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoSettingViewModel.h; sourceTree = "<group>"; };
@@ -232,12 +244,20 @@
 		D926EEDF1D7FF4CE00D56E88 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D96B6B6A1DC899A700EDE198 /* TCChatCell.h */,
+				D96B6B6B1DC899A700EDE198 /* TCChatCell.m */,
+				D96B6B6C1DC899A700EDE198 /* TCViewController.h */,
+				D96B6B6D1DC899A700EDE198 /* TCViewController.m */,
 				D926EEE01D7FF4CE00D56E88 /* FirstViewController.h */,
 				D926EEE11D7FF4CE00D56E88 /* FirstViewController.m */,
 				D926EEE21D7FF4CE00D56E88 /* SecondViewController.h */,
 				D926EEE31D7FF4CE00D56E88 /* SecondViewController.m */,
 				D9C4D9FC1DB780B90086BD19 /* DemoViewController.h */,
 				D9C4D9FD1DB780B90086BD19 /* DemoViewController.m */,
+				D9B76D1B1DC98EFE004D4F30 /* UserModel.h */,
+				D9B76D1C1DC98EFE004D4F30 /* UserModel.m */,
+				D9B76D1E1DC990C0004D4F30 /* MessageModel.h */,
+				D9B76D1F1DC990C0004D4F30 /* MessageModel.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -461,11 +481,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D926EEE81D7FF4CE00D56E88 /* SecondViewController.m in Sources */,
+				D96B6B6F1DC899A700EDE198 /* TCViewController.m in Sources */,
 				D9C4D9CF1DB7658E0086BD19 /* VideoSettingViewModel.m in Sources */,
 				D926EF411D7FF59A00D56E88 /* UIColor+Tools.m in Sources */,
 				D926EF3A1D7FF55B00D56E88 /* BaseNavVC.m in Sources */,
 				D926EF2A1D7FF55300D56E88 /* HomeApiManager.m in Sources */,
 				D926EEC91D7E801700D56E88 /* AppDelegate.m in Sources */,
+				D96B6B6E1DC899A700EDE198 /* TCChatCell.m in Sources */,
+				D9B76D1D1DC98EFE004D4F30 /* UserModel.m in Sources */,
 				D926EF421D7FF59A00D56E88 /* UIView+Layout.m in Sources */,
 				D9C4D9CE1DB7658E0086BD19 /* VideoSettingModel.m in Sources */,
 				D9C4D9D21DB765EE0086BD19 /* Defines.m in Sources */,
@@ -477,6 +500,7 @@
 				D9C4D9F21DB776630086BD19 /* StreamingViewController.m in Sources */,
 				D926EF3B1D7FF55B00D56E88 /* BaseWebVC.m in Sources */,
 				D926EF471D8013C300D56E88 /* URLSet.m in Sources */,
+				D9B76D201DC990C0004D4F30 /* MessageModel.m in Sources */,
 				D9C4D9F01DB776630086BD19 /* StreamingModel.m in Sources */,
 				D9C4D9EF1DB776630086BD19 /* StreamingLandscapeViewController.m in Sources */,
 				D926EF391D7FF55B00D56E88 /* BaseVC.m in Sources */,
