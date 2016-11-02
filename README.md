@@ -1,7 +1,7 @@
 <?php
     /**
      * This file is part of workerman.
-     *
+     *	php聊天服务端关键代码
      * Licensed under The MIT License
      * For full copyright and license information, please see the MIT-LICENSE.txt
      * Redistributions of files must retain the above copyright notice.
