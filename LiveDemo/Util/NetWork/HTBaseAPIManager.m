@@ -72,6 +72,19 @@ static HTBaseAPIManager *shared_manager = nil;
     return responseString;
 }
 
+- (void)fetchDataTask:(NSString *)keyIdentify
+{
+    NSDictionary *tempDic = self.dicOfTasks;
+    [tempDic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, NSURLSessionDataTask *taskObj, BOOL * _Nonnull stop) {
+        if([keyIdentify isEqualToString:key]){
+            if(stop){
+                if(taskObj.state == NSURLSessionTaskStateRunning)
+                    [taskObj cancel];
+                [self.dicOfTasks removeObjectForKey:key];
+            }
+        }
+    }];
+}
 #pragma mark - CommonAPI
 /**
  *

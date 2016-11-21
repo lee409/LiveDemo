@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "HTBaseAPIClient.h"
 @interface HTBaseAPIManager : NSObject
+@property(nonatomic,strong)NSMutableDictionary *dicOfTasks;
 + (HTBaseAPIManager *)sharedManager;
 
 - (BOOL)handleMessageError:(id)doc success:(void (^)(id data))success failure:(void (^)(NSError *error))failure;
 
 - (NSString *)progressResponse:(NSString *)res;
 
+- (void)fetchDataTask:(NSString *)keyIdentify;
 #pragma mark - CommonAPI
 /**
  *  上传图片

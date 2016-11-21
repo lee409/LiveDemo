@@ -16,6 +16,7 @@ static HomeApiManager *shared_manager = nil;
     static dispatch_once_t pred;
     dispatch_once(&pred, ^{
         shared_manager = [[self alloc] init];
+        shared_manager.dicOfTasks = [[NSMutableDictionary alloc] init];
     });
     return shared_manager;
 }
@@ -32,6 +33,7 @@ static HomeApiManager *shared_manager = nil;
                 Success:(void (^)(id data))success
                 failure:(void (^)(NSError *error))failure
 {
+    [self fetchDataTask:urlStr];
     NSDictionary * params = [[HTBaseAPIClient sharedClient] fetchParameters:dic withMethod:@"homedata"];
     NSMutableURLRequest *request = [[HTBaseAPIClient sharedClient].requestSerializer requestWithMethod:@"POST" URLString:urlStr parameters:params error:nil];
     NSLog(@"-------------start");
@@ -45,6 +47,7 @@ static HomeApiManager *shared_manager = nil;
         }
     }];
     [dataTask resume];
+    [self.dicOfTasks setObject:dataTask forKey:urlStr];
 }
 
 - (void)parseHomeData:(id)doc success:(void (^)(id data))success failure:(void (^)(NSError *error))failure
