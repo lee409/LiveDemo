@@ -9,4 +9,3 @@ target 'LiveDemo' do
     pod 'JSONModel'
     pod 'SocketRocket'
 end
-

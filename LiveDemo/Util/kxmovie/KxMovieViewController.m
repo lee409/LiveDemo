@@ -515,6 +515,7 @@ _messageLabel.hidden = YES;
 
 -(void) play
 {
+    _glView.isSnapshot = NO;
     if (self.playing)
         return;
     
@@ -561,6 +562,7 @@ _messageLabel.hidden = YES;
     [self enableAudio:NO];
     [self updatePlayButton];
     LoggerStream(1, @"pause movie");
+    _glView.isSnapshot = YES;
 }
 
 - (void) setMoviePosition: (CGFloat) position

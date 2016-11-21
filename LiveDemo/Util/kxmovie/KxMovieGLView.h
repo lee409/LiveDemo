@@ -15,10 +15,10 @@
 @class KxMovieDecoder;
 
 @interface KxMovieGLView : UIView
-
+@property(nonatomic,assign)BOOL isSnapshot;
 - (id) initWithFrame:(CGRect)frame
              decoder: (KxMovieDecoder *) decoder;
 
 - (void) render: (KxVideoFrame *) frame;
-
+- (UIImage*)snapshot:(UIView*)eaglview;
 @end

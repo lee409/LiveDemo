@@ -37,7 +37,7 @@
 
 - (IBAction)ffMpegAction
 {
-    NSString *path = @"http://weisili.gz.bcebos.com/lss-gjmk9t2h7icg8rm1/recording_20161019183218.mp4";//@"http://ols.lmschina.net/resources/resource/1281/20165915.mp4";
+    NSString *path = @"http://ols.lmschina.net/resources/resource/1281/20165915.mp4";//@"http://weisili.gz.bcebos.com/lss-gjmk9t2h7icg8rm1/recording_20161019183218.mp4";;
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     
     

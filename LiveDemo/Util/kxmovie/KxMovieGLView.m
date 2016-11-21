@@ -15,6 +15,7 @@
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
+#import <OpenGLES/ES1/glext.h>
 #import "KxMovieDecoder.h"
 #import "KxLogger.h"
 
@@ -38,7 +39,7 @@ NSString *const vertexShaderString = SHADER_STRING
      gl_Position = modelViewProjectionMatrix * position;
      v_texcoord = texcoord.xy;
  }
-);
+ );
 
 NSString *const rgbFragmentShaderString = SHADER_STRING
 (
@@ -49,7 +50,7 @@ NSString *const rgbFragmentShaderString = SHADER_STRING
  {
      gl_FragColor = texture2D(s_texture, v_texcoord);
  }
-);
+ );
 
 NSString *const yuvFragmentShaderString = SHADER_STRING
 (
@@ -68,14 +69,14 @@ NSString *const yuvFragmentShaderString = SHADER_STRING
      highp float g = y - 0.344 * u - 0.714 * v;
      highp float b = y + 1.772 * u;
      
-     gl_FragColor = vec4(r,g,b,1.0);     
+     gl_FragColor = vec4(r,g,b,1.0);
  }
-);
+ );
 
 static BOOL validateProgram(GLuint prog)
 {
-	GLint status;
-	
+    GLint status;
+    
     glValidateProgram(prog);
     
 #ifdef DEBUG
@@ -92,18 +93,18 @@ static BOOL validateProgram(GLuint prog)
     
     glGetProgramiv(prog, GL_VALIDATE_STATUS, &status);
     if (status == GL_FALSE) {
-		LoggerVideo(0, @"Failed to validate program %d", prog);
+        LoggerVideo(0, @"Failed to validate program %d", prog);
         return NO;
     }
-	
-	return YES;
+    
+    return YES;
 }
 
 static GLuint compileShader(GLenum type, NSString *shaderString)
 {
-	GLint status;
-	const GLchar *sources = (GLchar *)shaderString.UTF8String;
-	
+    GLint status;
+    const GLchar *sources = (GLchar *)shaderString.UTF8String;
+    
     GLuint shader = glCreateShader(type);
     if (shader == 0 || shader == GL_INVALID_ENUM) {
         LoggerVideo(0, @"Failed to create shader %d", type);
@@ -112,9 +113,9 @@ static GLuint compileShader(GLenum type, NSString *shaderString)
     
     glShaderSource(shader, 1, &sources, NULL);
     glCompileShader(shader);
-	
+    
 #ifdef DEBUG
-	GLint logLength;
+    GLint logLength;
     glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &logLength);
     if (logLength > 0)
     {
@@ -128,41 +129,41 @@ static GLuint compileShader(GLenum type, NSString *shaderString)
     glGetShaderiv(shader, GL_COMPILE_STATUS, &status);
     if (status == GL_FALSE) {
         glDeleteShader(shader);
-		LoggerVideo(0, @"Failed to compile shader:\n");
+        LoggerVideo(0, @"Failed to compile shader:\n");
         return 0;
     }
     
-	return shader;
+    return shader;
 }
 
 static void mat4f_LoadOrtho(float left, float right, float bottom, float top, float near, float far, float* mout)
 {
-	float r_l = right - left;
-	float t_b = top - bottom;
-	float f_n = far - near;
-	float tx = - (right + left) / (right - left);
-	float ty = - (top + bottom) / (top - bottom);
-	float tz = - (far + near) / (far - near);
+    float r_l = right - left;
+    float t_b = top - bottom;
+    float f_n = far - near;
+    float tx = - (right + left) / (right - left);
+    float ty = - (top + bottom) / (top - bottom);
+    float tz = - (far + near) / (far - near);
     
-	mout[0] = 2.0f / r_l;
-	mout[1] = 0.0f;
-	mout[2] = 0.0f;
-	mout[3] = 0.0f;
-	
-	mout[4] = 0.0f;
-	mout[5] = 2.0f / t_b;
-	mout[6] = 0.0f;
-	mout[7] = 0.0f;
-	
-	mout[8] = 0.0f;
-	mout[9] = 0.0f;
-	mout[10] = -2.0f / f_n;
-	mout[11] = 0.0f;
-	
-	mout[12] = tx;
-	mout[13] = ty;
-	mout[14] = tz;
-	mout[15] = 1.0f;
+    mout[0] = 2.0f / r_l;
+    mout[1] = 0.0f;
+    mout[2] = 0.0f;
+    mout[3] = 0.0f;
+    
+    mout[4] = 0.0f;
+    mout[5] = 2.0f / t_b;
+    mout[6] = 0.0f;
+    mout[7] = 0.0f;
+    
+    mout[8] = 0.0f;
+    mout[9] = 0.0f;
+    mout[10] = -2.0f / f_n;
+    mout[11] = 0.0f;
+    
+    mout[12] = tx;
+    mout[13] = ty;
+    mout[14] = tz;
+    mout[15] = 1.0f;
 }
 
 //////////////////////////////////////////////////////////
@@ -204,9 +205,9 @@ static void mat4f_LoadOrtho(float left, float right, float bottom, float top, fl
 - (void) setFrame: (KxVideoFrame *) frame
 {
     KxVideoFrameRGB *rgbFrame = (KxVideoFrameRGB *)frame;
-   
+    
     assert(rgbFrame.rgb.length == rgbFrame.width * rgbFrame.height * 3);
-
+    
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     
     if (0 == _texture)
@@ -285,15 +286,15 @@ static void mat4f_LoadOrtho(float left, float right, float bottom, float top, fl
     assert(yuvFrame.luma.length == yuvFrame.width * yuvFrame.height);
     assert(yuvFrame.chromaB.length == (yuvFrame.width * yuvFrame.height) / 4);
     assert(yuvFrame.chromaR.length == (yuvFrame.width * yuvFrame.height) / 4);
-
+    
     const NSUInteger frameWidth = frame.width;
-    const NSUInteger frameHeight = frame.height;    
+    const NSUInteger frameHeight = frame.height;
     
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     
     if (0 == _textures[0])
         glGenTextures(3, _textures);
-
+    
     const UInt8 *pixels[3] = { yuvFrame.luma.bytes, yuvFrame.chromaB.bytes, yuvFrame.chromaR.bytes };
     const NSUInteger widths[3]  = { frameWidth, frameWidth / 2, frameWidth / 2 };
     const NSUInteger heights[3] = { frameHeight, frameHeight / 2, frameHeight / 2 };
@@ -316,7 +317,7 @@ static void mat4f_LoadOrtho(float left, float right, float bottom, float top, fl
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    }     
+    }
 }
 
 - (BOOL) prepareRender
@@ -346,7 +347,7 @@ static void mat4f_LoadOrtho(float left, float right, float bottom, float top, fl
 #pragma mark - gl view
 
 enum {
-	ATTRIBUTE_VERTEX,
+    ATTRIBUTE_VERTEX,
    	ATTRIBUTE_TEXCOORD,
 };
 
@@ -367,7 +368,7 @@ enum {
 
 + (Class) layerClass
 {
-	return [CAEAGLLayer class];
+    return [CAEAGLLayer class];
 }
 
 - (id) initWithFrame:(CGRect)frame
@@ -388,7 +389,7 @@ enum {
             _renderer = [[KxMovieGLRenderer_RGB alloc] init];
             LoggerVideo(1, @"OK use RGB GL renderer");
         }
-                
+        
         CAEAGLLayer *eaglLayer = (CAEAGLLayer*) self.layer;
         eaglLayer.opaque = YES;
         eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -430,7 +431,7 @@ enum {
             self = nil;
             return nil;
         }
-                
+        
         if (![self loadShaders]) {
             
             self = nil;
@@ -455,7 +456,7 @@ enum {
 - (void)dealloc
 {
     _renderer = nil;
-
+    
     if (_framebuffer) {
         glDeleteFramebuffers(1, &_framebuffer);
         _framebuffer = 0;
@@ -470,27 +471,27 @@ enum {
         glDeleteProgram(_program);
         _program = 0;
     }
-	
-	if ([EAGLContext currentContext] == _context) {
-		[EAGLContext setCurrentContext:nil];
-	}
     
-	_context = nil;
+    if ([EAGLContext currentContext] == _context) {
+        [EAGLContext setCurrentContext:nil];
+    }
+    
+    _context = nil;
 }
 
 - (void)layoutSubviews
 {
     glBindRenderbuffer(GL_RENDERBUFFER, _renderbuffer);
     [_context renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)self.layer];
-	glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_backingWidth);
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_backingWidth);
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_backingHeight);
-	
+    
     GLenum status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
-	if (status != GL_FRAMEBUFFER_COMPLETE) {
-		
+    if (status != GL_FRAMEBUFFER_COMPLETE) {
+        
         LoggerVideo(0, @"failed to make complete framebuffer object %x", status);
         
-	} else {
+    } else {
         
         LoggerVideo(1, @"OK setup GL framebuffer %d:%d", _backingWidth, _backingHeight);
     }
@@ -512,35 +513,35 @@ enum {
     BOOL result = NO;
     GLuint vertShader = 0, fragShader = 0;
     
-	_program = glCreateProgram();
-	
+    _program = glCreateProgram();
+    
     vertShader = compileShader(GL_VERTEX_SHADER, vertexShaderString);
-	if (!vertShader)
+    if (!vertShader)
         goto exit;
     
-	fragShader = compileShader(GL_FRAGMENT_SHADER, _renderer.fragmentShader);
+    fragShader = compileShader(GL_FRAGMENT_SHADER, _renderer.fragmentShader);
     if (!fragShader)
         goto exit;
     
-	glAttachShader(_program, vertShader);
-	glAttachShader(_program, fragShader);
-	glBindAttribLocation(_program, ATTRIBUTE_VERTEX, "position");
+    glAttachShader(_program, vertShader);
+    glAttachShader(_program, fragShader);
+    glBindAttribLocation(_program, ATTRIBUTE_VERTEX, "position");
     glBindAttribLocation(_program, ATTRIBUTE_TEXCOORD, "texcoord");
-	
-	glLinkProgram(_program);
+    
+    glLinkProgram(_program);
     
     GLint status;
     glGetProgramiv(_program, GL_LINK_STATUS, &status);
     if (status == GL_FALSE) {
-		LoggerVideo(0, @"Failed to link program %d", _program);
+        LoggerVideo(0, @"Failed to link program %d", _program);
         goto exit;
     }
     
     result = validateProgram(_program);
-        
+    
     _uniformMatrix = glGetUniformLocation(_program, "modelViewProjectionMatrix");
     [_renderer resolveUniforms:_program];
-	
+    
 exit:
     
     if (vertShader)
@@ -583,24 +584,24 @@ exit:
 }
 
 - (void)render: (KxVideoFrame *) frame
-{        
+{
     static const GLfloat texCoords[] = {
         0.0f, 1.0f,
         1.0f, 1.0f,
         0.0f, 0.0f,
         1.0f, 0.0f,
     };
-	
+    
     [EAGLContext setCurrentContext:_context];
     
     glBindFramebuffer(GL_FRAMEBUFFER, _framebuffer);
     glViewport(0, 0, _backingWidth, _backingHeight);
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
-	glUseProgram(_program);
-        
+    glUseProgram(_program);
+    
     if (frame) {
-        [_renderer setFrame:frame];        
+        [_renderer setFrame:frame];
     }
     
     if ([_renderer prepareRender]) {
@@ -614,19 +615,151 @@ exit:
         glVertexAttribPointer(ATTRIBUTE_TEXCOORD, 2, GL_FLOAT, 0, 0, texCoords);
         glEnableVertexAttribArray(ATTRIBUTE_TEXCOORD);
         
-    #if 0
+#if 0
         if (!validateProgram(_program))
         {
             LoggerVideo(0, @"Failed to validate program");
             return;
         }
-    #endif
+#endif
         
-        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);        
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     }
     
     glBindRenderbuffer(GL_RENDERBUFFER, _renderbuffer);
+    if(self.isSnapshot){
+        UIImage *aImage = [self snapshot:self];
+        NSLog(@"aImage=%@",aImage);
+        if(aImage)
+        {
+            NSData *imagedata=UIImagePNGRepresentation(aImage);
+            //JEPG格式
+            //NSData *imagedata=UIImageJEPGRepresentation(m_imgFore,1.0);
+            
+            NSArray*paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+            NSString *documentsDirectory=[paths objectAtIndex:0];
+            NSString *savedImagePath=[documentsDirectory stringByAppendingPathComponent:@"saveFore.png"];
+            if([imagedata writeToFile:savedImagePath atomically:YES])
+                self.isSnapshot = NO;
+        }
+    }
     [_context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
+// IMPORTANT: Call this method after you draw and before -presentRenderbuffer:.
+- (UIImage*)snapshot:(UIView*)eaglview
+{
+    
+    GLint backingWidth, backingHeight;
+    // Bind the color renderbuffer used to render the OpenGL ES view
+    
+    // If your application only creates a single color renderbuffer which is already bound at this point,
+    
+    // this call is redundant, but it is needed if you're dealing with multiple renderbuffers.
+    
+    // Note, replace "_colorRenderbuffer" with the actual name of the renderbuffer object defined in your class.
+    
+    glBindRenderbufferOES(GL_RENDERBUFFER_OES, _renderbuffer);
+    
+    
+    
+    // Get the size of the backing CAEAGLLayer
+    
+    glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_WIDTH_OES, &backingWidth);
+    
+    glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
+    
+    
+    
+    NSInteger x = 0, y = 0, width = backingWidth, height = backingHeight;
+    
+    NSInteger dataLength = width * height * 4;
+    
+    GLubyte *data = (GLubyte*)malloc(dataLength * sizeof(GLubyte));
+    
+    
+    
+    // Read pixel data from the framebuffer
+    
+    glPixelStorei(GL_PACK_ALIGNMENT, 4);
+    
+    glReadPixels(x, y, width, height, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    
+    
+    
+    // Create a CGImage with the pixel data
+    
+    // If your OpenGL ES content is opaque, use kCGImageAlphaNoneSkipLast to ignore the alpha channel
+    
+    // otherwise, use kCGImageAlphaPremultipliedLast
+    
+    CGDataProviderRef ref = CGDataProviderCreateWithData(NULL, data, dataLength, NULL);
+    
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    
+    CGImageRef iref = CGImageCreate(width, height, 8, 32, width * 4, colorspace, kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast,
+                                    
+                                    ref, NULL, true, kCGRenderingIntentDefault);
+    
+    
+    
+    // OpenGL ES measures data in PIXELS
+    
+    // Create a graphics context with the target size measured in POINTS
+    
+    NSInteger widthInPoints, heightInPoints;
+    
+    if (NULL != UIGraphicsBeginImageContextWithOptions) {
+        
+        // On iOS 4 and later, use UIGraphicsBeginImageContextWithOptions to take the scale into consideration
+        
+        // Set the scale parameter to your OpenGL ES view's contentScaleFactor
+        
+        // so that you get a high-resolution snapshot when its value is greater than 1.0
+        
+        CGFloat scale = eaglview.contentScaleFactor;
+        
+        widthInPoints = width / scale;
+        
+        heightInPoints = height / scale;
+        
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(widthInPoints, heightInPoints), NO, scale);
+        
+    }
+    
+    else {
+        
+        // On iOS prior to 4, fall back to use UIGraphicsBeginImageContext
+        
+        widthInPoints = width;
+        
+        heightInPoints = height;
+        
+        UIGraphicsBeginImageContext(CGSizeMake(widthInPoints, heightInPoints));
+        
+    }
+    CGContextRef cgcontext = UIGraphicsGetCurrentContext();
+    
+    // UIKit coordinate system is upside down to GL/Quartz coordinate system
+    
+    // Flip the CGImage by rendering it to the flipped bitmap context
+    
+    // The size of the destination area is measured in POINTS
+    CGContextSetBlendMode(cgcontext, kCGBlendModeCopy);
+    CGContextDrawImage(cgcontext, CGRectMake(0.0, 0.0, widthInPoints, heightInPoints), iref);
+    
+    
+    // Retrieve the UIImage from the current context
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    // Clean up
+    free(data);
+    CFRelease(ref);
+    CFRelease(colorspace);
+    CGImageRelease(iref);
+    
+    return image;
+    
+}
 @end
